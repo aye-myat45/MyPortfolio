@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gold Shop</title>
+	<script type="text/javascript">
+		function gs() {
+			var gram=parseInt(document.gold.gram.value);
+			var price=parseInt(document.gold.price.value);
+
+			var kyat=parseInt(gram/16.6);
+			var pae=parseInt((parseFloat(gram/16.6)-parseInt(gram/16.6))*16);
+			var yway=parseInt((parseFloat((parseFloat(gram/16.6)-parseInt(gram/16.6))*16)-parseInt((parseFloat(gram/16.6)-parseInt(gram/16.6))*16))*8); 
+			var tyway=(kyat*128)+(pae*8)+yway;
+			var tprice=parseInt((tyway/128)*price);
+
+			document.gold.kyat.value=kyat;
+			document.gold.pae.value=pae;
+			document.gold.yway.value=yway;
+			document.gold.tprice.value=tprice;
+
+		}
+	</script>
+</head>
+<link rel="stylesheet" type="text/css" href="goldshop.css">
+<body>
+	<h1 id="h">Lucky Gold Shop</h1>
+	<form method="post" name="gold" id="content">
+		<label>Gram:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="gram" id="a" required="required"><br><br>
+		<label>Price:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="price" placeholder="kyats" id="a" required="required"><br><br>
+		<input type="button" value="Calculate" onclick="gs()" id="b">
+		<input type="reset" name="reset" value="Clear" id="b"><br><br>
+		<label>Kyat:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="kyat" readonly id="c" maxlength="10">&nbsp;&nbsp;&nbsp;
+		<label>Pae:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="pae" readonly id="c" maxlength="10">&nbsp;&nbsp;&nbsp;
+		<label>Yway:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="yway" readonly id="c" maxlength="10"><br><br>
+		<label>Total Price:&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="number" name="tprice" placeholder="kyats" readonly id="d">
+	</form>
+</body>
+</html>

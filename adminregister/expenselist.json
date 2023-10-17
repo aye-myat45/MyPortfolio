@@ -1,0 +1,22 @@
+{
+    "2": {
+        "date": "2019-05-24",
+        "title": "breakfast",
+        "amount": "500"
+    },
+    "4": {
+        "date": "2019-05-24",
+        "title": "food",
+        "amount": "1000"
+    },
+    "5": {
+        "date": "2019-05-17",
+        "title": "Lunch",
+        "amount": "1400"
+    },
+    "6": {
+        "date": "2019-05-20",
+        "title": "Noodle",
+        "amount": "700"
+    }
+}

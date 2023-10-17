@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Single Multiplication</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="loop.css">
+	<script type="text/javascript">
+		var num=parseInt(prompt("Enter a Number for Multiplication Table"));
+		if(num>=2)
+		{
+			document.write("<h1>Multiplication Table for "+num+"</h1><table><td id='c'>");
+			for(var i=1;i<=16;i++)
+				{
+					total=num*i;
+					document.write("<label>"+num+"*"+i+"="+total+"<br></label>");
+				}
+				document.write("</td></table>");
+		}
+		else
+		{
+			document.write(alert("Invalid Input"));
+		}
+	</script>
+</body>
+</html>

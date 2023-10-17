@@ -1,0 +1,26 @@
+*{
+	background: url("3D.jpeg");
+}
+label{
+	font-size: 24px;
+	font-family: sans-serif;
+	margin-left: 5px;
+}
+#a{
+
+}
+#c{
+	width: 120px;
+	height: 450px;
+	border: 2px solid blue;
+}
+h1{
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 28px;
+	margin-left: 10px;
+}
+table{
+	margin-left: 10px;
+}

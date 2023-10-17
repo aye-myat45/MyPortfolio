@@ -1,0 +1,26 @@
+#yeartable{
+	width: 725px;
+	margin-left: 300px;
+	
+}
+.tr11{
+	height: 50px;
+}
+.td11{
+	background-color: #7FFFD4;
+	font-size: 25px;
+	font-weight: bold;
+	padding-left: 20px;
+
+}
+.td22{
+	width: 50px;
+	font-size:20px;
+	font-weight: bold;
+	padding-left: 20px;
+}
+.td33{
+	width: 50px;
+	font-size:20px;
+	padding-left: 20px;
+}

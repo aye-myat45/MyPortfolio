@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Loan Calculator</title>
+	<link rel="stylesheet" type="text/css" href="interest2.css">
+	<link rel="stylesheet" type="text/css" href="loantable2.css">
+	<link rel="stylesheet" type="text/css" href="yeartable2.css">
+
+	<script type="text/javascript">
+		function calculate(){
+			var P=parseInt(document.myform.loan.value);//loan amount
+			document.myform.loanamount.value=P;
+			var R=parseInt(document.myform.interest.value);//interest percent
+			document.myform.interestrate.value=R;
+			var r=R/(100*12);//interest rate
+			var Y=parseInt(document.myform.year.value);
+			document.getElementById('Y').innerHTML=Y;
+			document.myform.tyear.value=Y;
+			var n=Y*12;//total months
+			var M=Math.round(P*(r*(1+r)**n)/(((1+r)**n)-1));//monthly payment amount
+			document.myform.payment.value=M;
+				var html='';
+				var pp=P;
+				var I=Math.round(((pp*(R/100))/12));
+				html=html+"<table border='1' id='yeartable'><tr class='tr11'><td colspan='4' class='td11'>Loan Payment Over "+Y+" Years</td></tr><tr class='tr11'><td class='td22'>Month No.</td><td class='td22'>Principle</td><td class='td22'>Interest</td><td class='td22'>Payment</td></tr><tr class='tr11'><td class='td33'>Month#1</td><td class='td33'>"+pp+"</td><td class='td33'>"+I+"</td><td class='td33'>"+M+"</td></tr>";
+				var II=I;
+				for(var i=2;i<=n;i++){
+					var H=Math.round((pp+I)-M);
+					pp=H;
+					var I=Math.round(((pp*(R/100))/12));
+					html=html+"<tr class='tr11'><td class='td33'>Month#"+i+"</td><td class='td33'>"+pp+"</td><td class='td33'>"+I+"</td><td class='td33'>"+M+"</td>";
+					var II=II+I;
+				}
+				html=html+"</table>";
+				document.getElementById('Dtable').innerHTML=html;
+				document.myform.tloan.value=II;
+
+		}
+	</script>
+</head>
+<body>
+	<h1>Home Loan Calculator</h1><br>
+	<form name="myform" method="get">
+		<fieldset id="fset">
+		<div id="dv">
+			<label id="l1">Loan Amount:</label><input type="number" name="loan" id="loan"><br><br>
+			<label id="l2">Interest Rate:</label><input type="number" name="interest" id="interest"><br><br>
+			<label id="l3">Term:</label><input type="number" name="year" id="year"><br><br>
+			<input type="button" name="button" value="Calculate" id="button" onclick="calculate()">
+		</div>
+		</fieldset><br><br>
+		<div>
+			<table border="1" id="loantable">
+				<tr class="tr1">
+					<td colspan="2" class="td1">Your Loan Payment</td>
+				</tr>
+				<tr class="tr1">
+					<td class="td2">Monthly Amount</td>
+					<td class="td3"><input type="number" name="payment" id="payment" readonly=""></td>
+				</tr>
+				<tr class="tr1">
+					<td class="td2">(<label id="Y"></label>)Years Total Interest</td>
+					<td class="td3"><input type="number" name="tloan" id="tloan" readonly=""></td>
+				</tr>
+				<tr class="tr1">
+					<td class="td2">Loan Amount</td>
+					<td class="td3"><input type="number" name="loanamount" id="loanamount" readonly=""></td>
+				</tr>
+				<tr class="tr1">
+					<td class="td2">Interest</td>
+					<td class="td3"><input type="number" name="interestrate" id="interestrate" readonly=""></td>
+				</tr>
+				<tr class="tr1">
+					<td class="td2">Term</td>
+					<td class="td3"><input type="number" name="tyear" readonly="" id="termid"></td>
+				</tr>
+			</table><br><br>
+		</div>
+	</form>
+	<div id="Dtable">
+		
+	</div>
+</body>
+</html>

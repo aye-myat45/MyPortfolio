@@ -1,0 +1,43 @@
+body{
+	background-image: url('22.jpg');
+	background-size: cover;
+}
+#h{
+	text-align: center;
+	color: yellow;
+	font-style: italic;
+	font-size: 60px;
+}
+#content{
+	left: 10%;
+}
+label{
+	font-size: 35px;
+	color: yellow;
+}
+input{
+	width: 250px;
+	height: 30px;
+	border-radius: 15px;
+}
+#a{
+	text-align: center;
+	font-size: 20px;
+}
+#b{
+	width: 100px;
+	height: 35px;
+	font-size: 20px;
+	background-color: #fe2396;
+	color: white;
+}
+#c{
+	width: 50px;
+	height: 30px;
+	text-align: center;
+	font-size: 20px;
+}
+#d{
+	text-align: center;
+	font-size: 20px;
+}

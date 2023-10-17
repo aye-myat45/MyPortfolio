@@ -1,0 +1,54 @@
+#loantable{
+	width: 725px;
+	margin-left: 300px;
+	
+}
+.tr1{
+	height: 50px;
+}
+.td1{
+	background-color: #7FFFD4;
+	font-size: 25px;
+	font-weight: bold;
+	padding-left: 20px;
+
+}
+.td2{
+	width: 550px;
+	font-size: 20px;
+	padding-left: 20px;
+}
+.td3{
+	width: 170px;
+	font-size: 20px;
+}
+#payment{
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+	padding-left: 50px;
+}
+#tloan{
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+	padding-left: 50px;	
+}
+#loanamount{
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+	padding-left: 50px;	
+}
+#interestrate{
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+	padding-left: 50px;	
+}
+#termid{
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+	padding-left: 50px;
+}
